@@ -1524,6 +1524,30 @@ section {
         height: 18px;
     }
     
+    /* All buttons mobile optimization */
+    .btn {
+        padding: var(--space-2) var(--space-4);
+        font-size: 0.9375rem;
+        min-height: 44px;
+        white-space: normal;
+        text-align: center;
+    }
+    
+    .btn svg {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+    }
+    
+    .btn-hero {
+        padding: var(--space-3) var(--space-6);
+        font-size: var(--font-size-lg);
+    }
+    
+    .social-section {
+        padding: var(--space-4);
+    }
+    
     .hero-title {
         font-size: var(--font-size-4xl);
     }
@@ -1584,5 +1608,30 @@ section {
     
     .brand-tagline {
         font-size: 0.75rem;
+    }
+    
+    /* All buttons ultra-small optimization */
+    .btn {
+        padding: 0.625rem 0.875rem;
+        font-size: 0.875rem;
+        gap: var(--space-1);
+    }
+    
+    .btn svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .btn-hero {
+        padding: var(--space-2) var(--space-4);
+        font-size: var(--font-size-base);
+    }
+    
+    .social-section {
+        padding: var(--space-3);
+    }
+    
+    .social-section p {
+        font-size: 0.875rem;
     }
 }
