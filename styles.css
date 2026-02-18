@@ -1510,6 +1510,20 @@ section {
         font-size: var(--font-size-base);
     }
     
+    .cta-label {
+        font-size: 0.625rem;
+    }
+    
+    .header-cta {
+        padding: 0.75rem 1rem;
+        max-width: 100%;
+    }
+    
+    .header-cta svg {
+        width: 18px;
+        height: 18px;
+    }
+    
     .hero-title {
         font-size: var(--font-size-4xl);
     }
@@ -1536,5 +1550,39 @@ section {
     
     .areas-list {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Ultra-small mobile (very narrow screens) */
+@media (max-width: 375px) {
+    .container {
+        padding-left: var(--space-2);
+        padding-right: var(--space-2);
+    }
+    
+    .header-cta {
+        padding: 0.625rem 0.875rem;
+        font-size: 0.9375rem;
+    }
+    
+    .cta-number {
+        font-size: 0.9375rem;
+        letter-spacing: -0.02em;
+    }
+    
+    .cta-label {
+        font-size: 0.5625rem;
+    }
+    
+    .header-content {
+        gap: var(--space-2);
+    }
+    
+    .brand-name {
+        font-size: 1rem;
+    }
+    
+    .brand-tagline {
+        font-size: 0.75rem;
     }
 }
