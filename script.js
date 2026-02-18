@@ -72,52 +72,7 @@
     });
     
     // ==========================================
-    // 4. Form Validation Enhancement
-    // ==========================================
-    const contactForm = document.querySelector('.contact-form');
-    
-    if (contactForm) {
-        const inputs = contactForm.querySelectorAll('input, textarea');
-        
-        inputs.forEach(input => {
-            // Add visual feedback on input
-            input.addEventListener('input', function() {
-                if (this.value.trim() !== '') {
-                    this.style.borderColor = 'var(--color-primary)';
-                } else{
-                    this.style.borderColor = 'var(--color-gray-300)';
-                }
-            });
-            
-            // Validate on blur
-            input.addEventListener('blur', function() {
-                if (this.hasAttribute('required') && this.value.trim() === '') {
-                    this.style.borderColor = 'var(--color-accent)';
-                }
-            });
-        });
-        
-        // Phone number formatting
-        const phoneInput = document.getElementById('contact-phone');
-        if (phoneInput) {
-            phoneInput.addEventListener('input', function(e) {
-                let value = e.target.value.replace(/\D/g, '');
-                if (value.length > 0) {
-                    if (value.length <= 3) {
-                        value = value;
-                    } else if (value.length <= 6) {
-                        value = value.slice(0, 3) + '-' + value.slice(3);
-                    } else {
-                        value = value.slice(0, 3) + '-' + value.slice(3, 6) + '-' + value.slice(6, 10);
-                    }
-                }
-                e.target.value = value;
-            });
-        }
-    }
-    
-    // ==========================================
-    // 5. Intersection Observer for Animations
+    // 4. Intersection Observer for Animations
     // ==========================================
     const observerOptions = {
         threshold: 0.05,
@@ -149,7 +104,7 @@
     });
     
     // ==========================================
-    // 6. Prefetch Phone Numbers (Performance)
+    // 5. Prefetch Phone Numbers (Performance)
     // ==========================================
     const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
     phoneLinks.forEach(link => {
@@ -157,7 +112,7 @@
     });
     
     // ==========================================
-    // 7. Track Outbound Links (Placeholder)
+    // 6. Track Outbound Links (Placeholder)
     // ==========================================
     const externalLinks = document.querySelectorAll('a[target="_blank"]');
     externalLinks.forEach(link => {
@@ -169,7 +124,7 @@
     });
     
     // ==========================================
-    // 8. Add "Back to Top" on Scroll
+    // 7. Add "Back to Top" on Scroll
     // ==========================================
     const createBackToTop = () => {
         const button = document.createElement('button');
@@ -221,7 +176,7 @@
     createBackToTop();
     
     // ==========================================
-    // 9. Log Page Load Performance (Dev Only)
+    // 8. Log Page Load Performance (Dev Only)
     // ==========================================
     if (window.performance && console && typeof console.log === 'function') {
         window.addEventListener('load', () => {
